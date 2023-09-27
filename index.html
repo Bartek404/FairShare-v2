@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairShare- Synchronize Your Finances, Together.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;1,300&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ab05b769d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/sass.css">
+</head>
+
+<body>
+    <div class="settings__menu-bg"></div>
+    <div class="settings__menu">
+
+        <h4>Settings:</h4>
+        <div class="settings__menu-box">
+            <label for="theme-btn">Switch Theme:</label>
+            <div class="theme-btn"><i class="fa-solid fa-circle-half-stroke"></i></div>
+        </div>
+        <div class="settings__menu-box">
+            <label for="advanced-btn">Advanced Mode:</label>
+            <div class="advanced-btn"><i class="fa-regular fa-chart-bar"></i></div>
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+        <div class="app">
+            <div class="app__header">
+                <h1>FairShare v2</h1>
+                <p>Synchronize Your Finances, Together.</p>
+                <button class="settings-btn"><i class="fa-solid fa-sliders"></i></button>
+            </div>
+
+
+
+            <div class="app__inputs-advanced">
+                <div class="bar"></div>
+                <h2>Advanced mode</h2>
+                <p>Enter the bill name, amount, and select the type to add a new bill.</p>
+                <div class="app__inputs">
+                    <div class="app__inputs-box">
+                        <label for="Bill-Name">Name:</label>
+                        <input type="text" id="bill-name" placeholder="Bill name">
+
+                        <label for="Bill-Type">Type of bill:</label>
+                        <select id="bill-type">
+                            <option value="0" default>Misc.</option>
+                            <option value="1">Rent</option>
+                            <option value="2">Household</option>
+                            <option value="3">Food</option>
+                            <option value="4">Clothing</option>
+                            <option value="5">Transportation</option>
+                            <option value="6">Loans, Other bills</option>
+                        </select>
+
+                        <label for="Bill-Amount">Amount:</label>
+                        <input type="number" id="bill-amount" placeholder="Bill amount">
+
+                        <button class="add-btn">Add</button>
+
+                    </div>
+                </div>
+
+                <div class="app__inputs-advanced-bills">
+
+                </div>
+            </div>
+
+
+            <div class="bar"></div>
+
+            <div class="app__inputs">
+                <div class="app__inputs-box">
+                    <label for="Person-One-Name">Person one:</label>
+                    <input type="text" id="personOneName" placeholder="Name">
+
+                    <label for="Person-One-Income">Monthly income:</label>
+                    <input type="number" id="personOneIncome" placeholder="Amount">
+                </div>
+                <div class="app__inputs-box">
+                    <label for="Person-Two-Name">Person two:</label>
+                    <input type="text" id="personTwoName" placeholder="Name">
+
+                    <label for="Person-Two-Income">Monthly income:</label>
+                    <input type="number" id="personTwoIncome" placeholder="Amount">
+                </div>
+
+                <div class="app__inputs-box">
+                    <label for="Monthly-Expenses">Monthly expenses:</label>
+                    <input type="number" id="monthlyExpenses" placeholder="Amount">
+                </div>
+
+                <div class="app__inputs-buttons">
+                    <button class="clear-btn">Reset</button>
+                    <button class="calculate-btn">Calculate</button>
+                </div>
+            </div>
+
+            <div class="bar"></div>
+
+            <div class="app__results">
+                <div class="app__results-info settings__menu">
+                    <p class="info-text"><b>Please correct following fields:</b></p>
+                    <div class="info-box">
+                    </div>
+                    <button class="info-btn">OK</button>
+                </div>
+                <div class="app__results-box">
+                    <input type="text" id="personOneNameResult" disabled placeholder="Name">
+                    <input type="text" id="personOneResult" disabled placeholder="Amount">
+                </div>
+                <div class="app__results-box">
+                    <input type="text" id="result" disabled placeholder="Result">
+                </div>
+                <div class="app__results-box">
+                    <input type="text" id="personTwoNameResult" disabled placeholder="Name">
+                    <input type="text" id="personTwoResult" disabled placeholder="Amount">
+                </div>
+
+
+
+                <canvas id="contributionChart"></canvas>
+
+                <canvas id="advancedChart"></canvas>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
