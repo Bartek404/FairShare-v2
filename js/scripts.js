@@ -162,6 +162,8 @@ const addNewBill = () => {
 		billType.value = 0
 
 		sumBills()
+		getPercentContribution()
+		showCharts()
 	} else {
 		errorPopup()
 	}
